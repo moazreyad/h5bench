@@ -72,6 +72,8 @@ typedef enum read_pattern {
     RDC_2D,
     CS_2D,
     PRL_2D,
+    LDC_3D,
+    PRL_3D
 } read_pattern;
 
 typedef enum pattern {

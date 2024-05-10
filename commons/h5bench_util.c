@@ -593,6 +593,10 @@ _set_io_pattern(bench_params *params_in_out)
                             (*params_in_out).access_pattern.pattern_read = LDC_2D;
                             ret                                          = 0;
                             break;
+                        case 3:
+                            (*params_in_out).access_pattern.pattern_read = LDC_3D;
+                            ret                                          = 0;
+                            break;
                         default:
                             ret = -1;
                             printf("%s(). Unexpected Dimensions for LDC. failed on line %d\n", __func__,
@@ -617,6 +621,10 @@ _set_io_pattern(bench_params *params_in_out)
                     switch (params_in_out->num_dims) {
                         case 2:
                             (*params_in_out).access_pattern.pattern_read = PRL_2D;
+                            ret                                          = 0;
+                            break;
+                        case 3:
+                            (*params_in_out).access_pattern.pattern_read = PRL_3D;
                             ret                                          = 0;
                             break;
                         default:
